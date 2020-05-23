@@ -40,8 +40,13 @@ end
  puts "Welcome to Tic Tac Toe!"
   display_board(board)
   
-def play |board| do
-  9.times turn(board)
+def play(board)
+  counter = 0
+  loop do 
+    counter += 1
+    turn(board)
+    if counter >= 9
+      break
   end
 end
 
