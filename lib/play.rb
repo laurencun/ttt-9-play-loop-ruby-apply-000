@@ -49,5 +49,3 @@ def play(board)
       break
   end
 end
-
-play(board)
