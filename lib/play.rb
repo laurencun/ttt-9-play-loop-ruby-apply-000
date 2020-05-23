@@ -25,8 +25,8 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  input = gets.strip
-  index = input_to_index(input)
+  user_input = gets.strip
+  index = input_to_index(user_input)
   if valid_move?(board, index)
     move(board, index)
     display_board(board)
@@ -36,3 +36,17 @@ def turn(board)
 end
 
 # Define your play method below
+  board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+ puts "Welcome to Tic Tac Toe!"
+  display_board(board)
+  
+def play(board)
+  counter = 0
+  loop do 
+    counter += 1
+    turn(board)
+    if counter >= 9
+      break
+  end
+end
+end
